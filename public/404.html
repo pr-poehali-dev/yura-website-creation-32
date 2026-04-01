@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>CityService</title>
+  <!-- Редирект для GitHub Pages: перенаправляем все 404 обратно на index.html -->
+  <script>
+    // Сохраняем путь и перенаправляем на главную страницу
+    // HashRouter сам разберётся с маршрутом
+    var l = window.location;
+    l.replace(
+      l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+      l.pathname.split('/').slice(0, 1).join('/') + '/?/' +
+      l.pathname.slice(1).replace(/&/g, '~and~') +
+      (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+      l.hash
+    );
+  </script>
+</head>
+<body>
+  <p>Загрузка...</p>
+</body>
+</html>
